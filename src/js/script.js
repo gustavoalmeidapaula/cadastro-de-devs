@@ -1,13 +1,13 @@
 const button = document.getElementById('button')
 const form = document.getElementById('form')
 
+let number_input = 0
+
 form.addEventListener('submit', (ev) =>{
     ev.preventDefault()
 
     button.addEventListener('click', (ev) =>{
         ev.preventDefault()
-
-        let number_input = 0
         number_input++
 
         const button_cadastrar = document.getElementById('cadastrar')
@@ -74,6 +74,7 @@ form.addEventListener('submit', (ev) =>{
         remove.addEventListener('click', (ev) =>{
             ev.preventDefault()
             div.removeChild(bloco)
+            number_input--;
         })
 
 
@@ -81,21 +82,22 @@ form.addEventListener('submit', (ev) =>{
             ev.preventDefault()
 
             const name = document.getElementById('name').value
-            const tecnologia_name = input_tecnologias.value
-            let time_tecnologias = ''
+            const tecnologia_name = document.querySelectorAll("input[id='tecnologias']")
+            const time_experience = document.querySelectorAll("input[type='radio']:checked")
+            const mensagem = [''];
 
-            document.querySelectorAll("input[type= 'radio']:checked").forEach(function (item){
-                time_tecnologias += ' - ' + item.value + '\n'
-            })
+            console.log({name, tecnologia_name, time_experience})
 
-            console.log({name, tecnologia_name, time_tecnologias})
+            for(var i = 0; i < number_input; i++){
+                
+                mensagem[i] = "\n* Nome da tecnologia: " + tecnologia_name[i].value +
+                "\n* Tempo de experiência: " + time_experience[i].value
+            }
 
-            alert(
-                "Cadastro concluído" +
-            "\nNome do desenvolvedor: " + name +
-            "\nNome da tecnologia: " + tecnologia_name +
-            "\nTempo de experiência: " + time_tecnologias 
-            )
+            alert("Cadastro concluído!" +
+                "\n=> Nome do desenvolvedor: " + name + 
+                "\n=>Tecnologias e Tempo de Experiência:" + mensagem
+                )
         })
     })
 })
