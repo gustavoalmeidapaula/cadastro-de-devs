@@ -11,7 +11,7 @@ form.addEventListener('submit', (ev) =>{
         number_input++
 
         const button_cadastrar = document.getElementById('cadastrar')
-        const div = document.getElementById('bloco')
+        const div = document.getElementById('agrupamento')
 
         const bloco = document.createElement('div')
         const br = document.createElement('br')
