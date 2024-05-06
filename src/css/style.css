@@ -40,6 +40,23 @@ h1 {
     border-radius: 5px;
 }
 
+#tech {
+    width: 280px;
+    padding:8px;
+    border-radius: 5px;
+}
+
+#tecnologias {
+    width: 280px;
+    padding:8px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+}
+
+#tempo {
+    margin-bottom: 10px;
+}
+
 button {
     margin-top: 5px;
     background-color: var(--primary-color);
