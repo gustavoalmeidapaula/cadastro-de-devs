@@ -90,13 +90,13 @@ form.addEventListener('submit', (ev) =>{
 
             for(var i = 0; i < number_input; i++){
                 
-                mensagem[i] = "\n* Nome da tecnologia: " + tecnologia_name[i].value +
-                "\nTempo de experiência: " + time_experience[i].value
+                mensagem[i] = "\n- Nome da tecnologia: " + tecnologia_name[i].value +
+                "\n- Tempo de experiência: " + time_experience[i].value
             }
 
             alert("Cadastro concluído!" +
-                "\n-> Nome do desenvolvedor: " + name + 
-                "\n->Tecnologias e Tempo de Experiência:" + mensagem
+                "\n> Nome do desenvolvedor: " + name + 
+                "\n> Tecnologias e Tempo de Experiência:" + mensagem
                 )
         })
     })
