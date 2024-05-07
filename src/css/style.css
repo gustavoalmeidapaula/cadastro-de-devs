@@ -31,7 +31,8 @@ body {
 
 #container2 {
     background-color: #212529;
-    padding: 50px 20px 5cqmin 15px;
+    padding: 50px 20px 50px 20px;
+    border: var(--border-color) double 5px;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -68,6 +69,7 @@ h1 {
 }
 
 button {
+    color: var(--bg-color);
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: var(--primary-color);
@@ -91,6 +93,7 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: var(--bg-color) double 5px;
 }
 
 .cadastro {
@@ -99,10 +102,12 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: var(--bg-color) double 5px;
 }
 
 button:hover {
     background-color: #3d3e3f;
     color: var(--primary-color);
     transform: scale(1.1);
+    border: var(--primary-color) double 5px;
 }
