@@ -19,10 +19,41 @@ body {
     font-family: sans-serif;
 }
 
+#cabecalho {
+    margin: 0px;
+    margin-bottom: 70px;
+    display: block;
+    text-align: center;
+    border-top: var(--primary-color) double 5px;
+    border-bottom: var(--primary-color) double 5px;
+    padding: 20px;
+}
+
+.cadDevs {
+    font-size: 50px;
+    padding: 15px 0 0 0;
+    color: var(--font-color);
+    margin-bottom: 10px;
+}
+
+.boasVindas1 {
+    font-size: 27px;
+    color: var(--primary-color);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.boasVindas2 {
+    font-size: 20px;
+    color: var(--font-color);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 0 0 10px 0;
+}
+
 #container {
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,9 +61,10 @@ body {
 }
 
 #container2 {
-    background-color: #212529;
+    margin-top: 50px;
+    background-color: var(--bg-color);
     padding: 50px 20px 50px 20px;
-    border: var(--border-color) double 5px;
+    border: var(--primary-color) double 5px;
     border-radius: 15px;
     display: flex;
     align-items: center;
