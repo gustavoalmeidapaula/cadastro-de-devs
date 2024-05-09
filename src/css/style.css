@@ -2,7 +2,6 @@
     margin: 0;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
@@ -10,7 +9,6 @@
     --border-color: #666;
     --font-color: #f1f5f9;
     --primary-color: #4dff91;
-    --error-color: #ff0043;
 }
 
 body {
@@ -143,3 +141,20 @@ button:hover {
     transform: scale(1.1);
     border: var(--primary-color) double 5px;
 }
+
+#themeSwitcher {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    border: var(--bg-color) double 5px;
+    transition: .15s;
+    cursor:pointer;
+}
+    
+
+#themeSwitcher:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transform: scale(1.1);
+    border: var(--primary-color) double 5px;
+}
+
