@@ -1,5 +1,8 @@
 const button = document.getElementById('button')
 const form = document.getElementById('form')
+const main = document.querySelector('main')
+const root = document.querySelector(':root')
+const theme = document.getElementById('themeSwitcher')
 
 let number_input = 0
 
@@ -78,6 +81,23 @@ form.addEventListener('submit', (ev) =>{
             number_input--;
         })
 
+
+         // Função do botão de tema
+         theme.addEventListener('click', function () {
+            // Se o tema estiver como dark, troca para as cores do tema claro
+            if (main.dataset.theme === 'dark') {
+                root.style.setProperty('--bg-color', '#f1f5f9')
+                root.style.setProperty('--font-color', '#212529')
+                root.style.setProperty('--primary-color', '#26834a')
+                main.dataset.theme = 'light'
+            // Se o tema estiver como light, troca as cores para o tema escuro
+            } else {
+                root.style.setProperty('--bg-color', '#212529')
+                root.style.setProperty('--font-color', '#f1f5f9')
+                root.style.setProperty('--primary-color', '#4dff91')
+                main.dataset.theme = 'dark'
+            }
+        })
 
         button_cadastrar.addEventListener('click', (ev) => {
             ev.preventDefault()
