@@ -6,6 +6,20 @@ const theme = document.getElementById('themeSwitcher')
 
 let number_input = 0
 
+  theme.addEventListener('click', function () {
+    if (main.dataset.theme === 'dark') {
+        root.style.setProperty('--bg-color', '#f1f5f9')
+        root.style.setProperty('--font-color', '#212529')
+        root.style.setProperty('--primary-color', '#212529')
+        main.dataset.theme = 'light'
+    } else {
+        root.style.setProperty('--bg-color', '#212529')
+        root.style.setProperty('--font-color', '#f1f5f9')
+        root.style.setProperty('--primary-color', '#4dff91')
+        main.dataset.theme = 'dark'
+    }
+})
+
 form.addEventListener('submit', (ev) =>{
     ev.preventDefault()
 
@@ -79,24 +93,6 @@ form.addEventListener('submit', (ev) =>{
             ev.preventDefault()
             div.removeChild(div2)
             number_input--;
-        })
-
-
-         // Função do botão de tema
-         theme.addEventListener('click', function () {
-            // Se o tema estiver como dark, troca para as cores do tema claro
-            if (main.dataset.theme === 'dark') {
-                root.style.setProperty('--bg-color', '#f1f5f9')
-                root.style.setProperty('--font-color', '#212529')
-                root.style.setProperty('--primary-color', '#26834a')
-                main.dataset.theme = 'light'
-            // Se o tema estiver como light, troca as cores para o tema escuro
-            } else {
-                root.style.setProperty('--bg-color', '#212529')
-                root.style.setProperty('--font-color', '#f1f5f9')
-                root.style.setProperty('--primary-color', '#4dff91')
-                main.dataset.theme = 'dark'
-            }
         })
 
         button_cadastrar.addEventListener('click', (ev) => {
